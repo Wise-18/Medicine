@@ -1,0 +1,514 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-03 11:41+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\center\forms.py:34
+msgid "Minimum age 16 years old"
+msgstr "Минимальный возраст 16 лет"
+
+#: .\center\forms.py:36
+msgid "Wrong date and time format"
+msgstr "Неправильный формат даты или времени"
+
+#: .\center\forms.py:70 .\center\models.py:70 .\templates\kind\index.html:13
+#: .\templates\kind\index.html:37 .\templates\kind\read.html:11
+msgid "kind_title"
+msgstr "Название типа услуги"
+
+#: .\center\forms.py:83 .\center\models.py:84 .\templates\index.html:51
+#: .\templates\index.html:71 .\templates\service\index.html:13
+#: .\templates\service\index.html:38 .\templates\service\read.html:12
+msgid "service_title"
+msgstr "Название услуги"
+
+#: .\center\forms.py:126 .\center\models.py:102
+#: .\templates\category\index.html:13 .\templates\category\index.html:37
+#: .\templates\category\read.html:11
+msgid "category_title"
+msgstr "Название врачебной категории"
+
+#: .\center\forms.py:127 .\center\models.py:115
+#: .\templates\branch\index.html:13 .\templates\branch\index.html:37
+#: .\templates\branch\index.html:61 .\templates\branch\read.html:11
+msgid "branch_title"
+msgstr "Название отделения"
+
+#: .\center\forms.py:128 .\center\models.py:128
+#: .\templates\specialization\index.html:13
+#: .\templates\specialization\index.html:37
+#: .\templates\specialization\read.html:11
+msgid "specialization_title"
+msgstr "Название специализации"
+
+#: .\center\forms.py:129
+msgid "email"
+msgstr "E-Mail"
+
+#: .\center\forms.py:142 .\center\forms.py:158
+#: .\templates\doctor\create.html:5 .\templates\doctor\edit.html:5
+#: .\templates\doctor\read.html:5 .\templates\report\report_1.html:16
+#: .\templates\report\report_2.html:41 .\templates\report\report_3.html:17
+#: .\templates\report\report_3.html:42 .\templates\report\report_4.html:13
+#: .\templates\report\report_4.html:37 .\templates\schedule\index.html:37
+#: .\templates\schedule\list.html:11 .\templates\visit\index.html:39
+#: .\templates\visit\list.html:13 .\templates\visit\read.html:13
+msgid "doctor"
+msgstr "Врач"
+
+#: .\center\forms.py:157 .\templates\schedule\create.html:5
+#: .\templates\schedule\edit.html:5 .\templates\schedule\read.html:5
+msgid "schedule"
+msgstr "Расписание приема"
+
+#: .\center\models.py:34 .\center\models.py:141
+#: .\templates\client\index.html:13 .\templates\client\index.html:37
+#: .\templates\client\list.html:11 .\templates\doctor\index.html:13
+#: .\templates\doctor\index.html:37 .\templates\schedule\index.html:13
+#: .\templates\visit\index.html:13
+msgid "full_name"
+msgstr "ФИО"
+
+#: .\center\models.py:35 .\templates\client\index.html:38
+#: .\templates\client\list.html:12 .\templates\client\read.html:12
+msgid "birthday"
+msgstr "Дата рождения"
+
+#: .\center\models.py:36 .\templates\client\index.html:39
+#: .\templates\client\list.html:13 .\templates\client\read.html:13
+msgid "sex"
+msgstr "Пол (М/Ж)"
+
+#: .\center\models.py:37 .\templates\client\index.html:40
+#: .\templates\client\list.html:14 .\templates\client\read.html:14
+msgid "address"
+msgstr "Адрес"
+
+#: .\center\models.py:38 .\templates\client\index.html:41
+#: .\templates\client\list.html:15 .\templates\client\read.html:15
+msgid "phone"
+msgstr "Телефон"
+
+#: .\center\models.py:55 .\templates\diagnosis\index.html:16
+#: .\templates\diagnosis\read.html:12
+msgid "date_diagnosis"
+msgstr "Дата"
+
+#: .\center\models.py:57 .\templates\diagnosis\index.html:17
+#: .\templates\diagnosis\read.html:13
+msgid "diagnosis_details"
+msgstr "Детали диагноза"
+
+#: .\center\models.py:85
+msgid "service_price"
+msgstr "Стоимость услуги"
+
+#: .\center\models.py:163 .\center\models.py:171
+msgid "monday"
+msgstr "Понедельник"
+
+#: .\center\models.py:164
+msgid "tuesday"
+msgstr "Вторник"
+
+#: .\center\models.py:165
+msgid "wednesday"
+msgstr "Среда"
+
+#: .\center\models.py:166
+msgid "thursday"
+msgstr "Четверг"
+
+#: .\center\models.py:167
+msgid "friday"
+msgstr "Пятница"
+
+#: .\center\models.py:168
+msgid "saturday"
+msgstr "Суббота"
+
+#: .\center\models.py:169
+msgid "sunday"
+msgstr "Воскресенье"
+
+#: .\center\models.py:171 .\templates\schedule\index.html:38
+#: .\templates\schedule\list.html:12 .\templates\schedule\read.html:12
+msgid "week_day"
+msgstr "День недели"
+
+#: .\center\models.py:172 .\templates\schedule\index.html:39
+#: .\templates\schedule\list.html:13 .\templates\schedule\read.html:13
+msgid "time_schedule"
+msgstr "Время приема"
+
+#: .\center\models.py:190 .\templates\report\report_1.html:14
+#: .\templates\report\report_3.html:40 .\templates\visit\index.html:37
+#: .\templates\visit\list.html:11
+msgid "date_visit"
+msgstr "Дата"
+
+#: .\center\models.py:193 .\templates\visit\index.html:40
+#: .\templates\visit\list.html:14 .\templates\visit\read.html:14
+msgid "visit_details"
+msgstr "Детали посещения"
+
+#: .\center\models.py:214
+msgid "sale_price"
+msgstr "Стоимость"
+
+#: .\templates\base.html:38
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\base.html:46 .\templates\base.html:58
+msgid "Clients"
+msgstr "Клиенты"
+
+#: .\templates\base.html:47
+msgid "Kinds"
+msgstr "Типы услуг"
+
+#: .\templates\base.html:48
+msgid "Services"
+msgstr "Услуги"
+
+#: .\templates\base.html:49
+msgid "Categorys"
+msgstr "Врачебные категории"
+
+#: .\templates\base.html:50
+msgid "Branchs"
+msgstr "Отделения"
+
+#: .\templates\base.html:51
+msgid "Specializations"
+msgstr "Специализации врачей"
+
+#: .\templates\base.html:52
+msgid "Doctors"
+msgstr "Врачи"
+
+#: .\templates\base.html:53 .\templates\base.html:56
+msgid "Schedules"
+msgstr "Расписание приема"
+
+#: .\templates\base.html:54 .\templates\base.html:57
+msgid "Visits"
+msgstr "Посещения"
+
+#: .\templates\base.html:59 .\templates\visit\index.html:52
+msgid "Sales"
+msgstr "Продажи услуг"
+
+#: .\templates\base.html:62
+msgid "My account"
+msgstr "Моя учетная запись"
+
+#: .\templates\base.html:63
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: .\templates\base.html:65
+msgid "Log out"
+msgstr "Выйти"
+
+#: .\templates\base.html:70
+msgid "Log In"
+msgstr "Войти"
+
+#: .\templates\base.html:71
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+#: .\templates\branch\create.html:3 .\templates\branch\index.html:54
+#: .\templates\category\create.html:3 .\templates\category\index.html:30
+#: .\templates\client\create.html:3 .\templates\client\index.html:30
+#: .\templates\diagnosis\create.html:3 .\templates\diagnosis\index.html:9
+#: .\templates\doctor\create.html:3 .\templates\doctor\index.html:30
+#: .\templates\kind\create.html:3 .\templates\kind\index.html:30
+#: .\templates\sale\create.html:3 .\templates\sale\index.html:8
+#: .\templates\schedule\create.html:3 .\templates\schedule\index.html:30
+#: .\templates\service\create.html:3 .\templates\service\index.html:30
+#: .\templates\specialization\create.html:3
+#: .\templates\specialization\index.html:30 .\templates\visit\create.html:3
+#: .\templates\visit\index.html:30
+msgid "Add"
+msgstr "Добавить"
+
+#: .\templates\branch\create.html:5 .\templates\branch\edit.html:5
+#: .\templates\branch\read.html:5 .\templates\doctor\index.html:39
+#: .\templates\doctor\read.html:13
+msgid "branch"
+msgstr "Отделение"
+
+#: .\templates\branch\create.html:12 .\templates\branch\edit.html:12
+#: .\templates\category\create.html:12 .\templates\category\edit.html:12
+#: .\templates\client\create.html:12 .\templates\client\edit.html:12
+#: .\templates\diagnosis\create.html:12 .\templates\diagnosis\edit.html:12
+#: .\templates\doctor\create.html:12 .\templates\doctor\edit.html:12
+#: .\templates\kind\create.html:12 .\templates\kind\edit.html:12
+#: .\templates\sale\create.html:12 .\templates\sale\edit.html:12
+#: .\templates\schedule\create.html:12 .\templates\schedule\edit.html:12
+#: .\templates\service\create.html:12 .\templates\service\edit.html:12
+#: .\templates\specialization\create.html:12
+#: .\templates\specialization\edit.html:12 .\templates\visit\create.html:12
+#: .\templates\visit\edit.html:12
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\branch\create.html:13 .\templates\branch\edit.html:13
+#: .\templates\branch\read.html:18 .\templates\category\create.html:13
+#: .\templates\category\edit.html:13 .\templates\category\read.html:18
+#: .\templates\client\create.html:13 .\templates\client\edit.html:13
+#: .\templates\client\read.html:22 .\templates\diagnosis\create.html:13
+#: .\templates\diagnosis\edit.html:13 .\templates\diagnosis\read.html:20
+#: .\templates\doctor\create.html:13 .\templates\doctor\edit.html:13
+#: .\templates\doctor\read.html:22 .\templates\kind\create.html:13
+#: .\templates\kind\edit.html:13 .\templates\kind\read.html:18
+#: .\templates\report\report_1.html:31 .\templates\report\report_2.html:57
+#: .\templates\report\report_3.html:57 .\templates\report\report_4.html:51
+#: .\templates\sale\create.html:13 .\templates\sale\edit.html:13
+#: .\templates\sale\read.html:19 .\templates\schedule\create.html:13
+#: .\templates\schedule\edit.html:13 .\templates\schedule\read.html:20
+#: .\templates\service\create.html:13 .\templates\service\edit.html:13
+#: .\templates\service\read.html:20 .\templates\specialization\create.html:13
+#: .\templates\specialization\edit.html:13
+#: .\templates\specialization\read.html:18 .\templates\visit\create.html:13
+#: .\templates\visit\edit.html:13 .\templates\visit\read.html:21
+msgid "Back"
+msgstr "Назад"
+
+#: .\templates\branch\edit.html:3 .\templates\branch\index.html:71
+#: .\templates\category\edit.html:3 .\templates\category\index.html:47
+#: .\templates\client\edit.html:3 .\templates\client\index.html:57
+#: .\templates\diagnosis\edit.html:3 .\templates\diagnosis\index.html:29
+#: .\templates\doctor\edit.html:3 .\templates\doctor\index.html:55
+#: .\templates\kind\edit.html:3 .\templates\kind\index.html:47
+#: .\templates\sale\edit.html:3 .\templates\sale\index.html:27
+#: .\templates\schedule\edit.html:3 .\templates\schedule\index.html:51
+#: .\templates\service\edit.html:3 .\templates\service\index.html:51
+#: .\templates\specialization\edit.html:3
+#: .\templates\specialization\index.html:47 .\templates\visit\edit.html:3
+#: .\templates\visit\index.html:56
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\branch\index.html:3 .\templates\branch\index.html:5
+msgid "branchs"
+msgstr "Отделения"
+
+#: .\templates\branch\index.html:19 .\templates\branch\index.html:43
+#: .\templates\category\index.html:19 .\templates\client\index.html:19
+#: .\templates\doctor\index.html:19 .\templates\index.html:60
+#: .\templates\kind\index.html:19 .\templates\schedule\index.html:19
+#: .\templates\service\index.html:19 .\templates\specialization\index.html:19
+#: .\templates\visit\index.html:19
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\branch\index.html:22 .\templates\branch\index.html:46
+#: .\templates\category\index.html:22 .\templates\client\index.html:22
+#: .\templates\doctor\index.html:22 .\templates\index.html:61
+#: .\templates\kind\index.html:22 .\templates\report\report_2.html:32
+#: .\templates\report\report_3.html:32 .\templates\report\report_4.html:28
+#: .\templates\schedule\index.html:22 .\templates\service\index.html:22
+#: .\templates\specialization\index.html:22 .\templates\visit\index.html:22
+msgid "Reset"
+msgstr "Сброс"
+
+#: .\templates\branch\index.html:72 .\templates\branch\read.html:3
+#: .\templates\category\index.html:48 .\templates\category\read.html:3
+#: .\templates\client\index.html:58 .\templates\client\read.html:3
+#: .\templates\diagnosis\index.html:30 .\templates\diagnosis\read.html:3
+#: .\templates\doctor\index.html:56 .\templates\doctor\read.html:3
+#: .\templates\kind\index.html:48 .\templates\kind\read.html:3
+#: .\templates\sale\index.html:28 .\templates\sale\read.html:3
+#: .\templates\schedule\index.html:52 .\templates\schedule\read.html:3
+#: .\templates\service\index.html:52 .\templates\service\read.html:3
+#: .\templates\specialization\index.html:48
+#: .\templates\specialization\read.html:3 .\templates\visit\index.html:57
+#: .\templates\visit\read.html:3
+msgid "View"
+msgstr "Посмотреть"
+
+#: .\templates\branch\index.html:73 .\templates\category\index.html:49
+#: .\templates\client\index.html:59 .\templates\diagnosis\index.html:31
+#: .\templates\doctor\index.html:57 .\templates\kind\index.html:49
+#: .\templates\sale\index.html:29 .\templates\schedule\index.html:53
+#: .\templates\service\index.html:53 .\templates\specialization\index.html:49
+#: .\templates\visit\index.html:58
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\category\create.html:5 .\templates\category\edit.html:5
+#: .\templates\category\read.html:5 .\templates\doctor\index.html:38
+#: .\templates\doctor\read.html:12
+msgid "category"
+msgstr "Врачебная категория"
+
+#: .\templates\category\index.html:3 .\templates\category\index.html:5
+msgid "categorys"
+msgstr "Врачебные категории"
+
+#: .\templates\client\create.html:5 .\templates\client\edit.html:5
+#: .\templates\client\read.html:5 .\templates\diagnosis\index.html:7
+#: .\templates\diagnosis\index.html:15 .\templates\report\report_1.html:15
+#: .\templates\report\report_2.html:17 .\templates\report\report_2.html:40
+#: .\templates\report\report_3.html:41 .\templates\report\report_4.html:36
+#: .\templates\visit\index.html:38 .\templates\visit\list.html:12
+#: .\templates\visit\read.html:12
+msgid "client"
+msgstr "Клиент"
+
+#: .\templates\client\index.html:3 .\templates\client\index.html:5
+#: .\templates\client\list.html:3 .\templates\client\list.html:5
+msgid "clients"
+msgstr "Клиенты"
+
+#: .\templates\client\index.html:50 .\templates\client\list.html:23
+msgid "Diagnosis"
+msgstr "Диагноз"
+
+#: .\templates\diagnosis\create.html:5 .\templates\diagnosis\edit.html:5
+#: .\templates\diagnosis\read.html:5 .\templates\kind\read.html:5
+msgid "diagnosis"
+msgstr "Диагнозы"
+
+#: .\templates\diagnosis\index.html:3 .\templates\diagnosis\index.html:5
+msgid "diagnosiss"
+msgstr "Диагнозы"
+
+#: .\templates\doctor\index.html:3 .\templates\doctor\index.html:5
+msgid "doctors"
+msgstr "Врачи"
+
+#: .\templates\doctor\index.html:40 .\templates\doctor\read.html:14
+#: .\templates\specialization\create.html:5
+#: .\templates\specialization\edit.html:5
+#: .\templates\specialization\read.html:5
+msgid "specialization"
+msgstr "Специализация"
+
+#: .\templates\doctor\index.html:41 .\templates\doctor\read.html:15
+msgid "user"
+msgstr "Пользователь"
+
+#: .\templates\index.html:4 .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "Medicine"
+
+#: .\templates\index.html:13 .\templates\report\report_1.html:8
+msgid "report1"
+msgstr "Информация о планируемых посещениях с сортировкой по возрастанию дат и группировкой по пациентам"
+
+#: .\templates\index.html:14 .\templates\report\report_2.html:8
+msgid "report2"
+msgstr "Информация о стоимости посещений конкретного пациента за определенный период времени с группировкой по врачам"
+
+#: .\templates\index.html:15 .\templates\report\report_3.html:8
+msgid "report3"
+msgstr "Список пациентов, которым назначено посещение конкретного врача на конкретную дату"
+
+#: .\templates\index.html:16 .\templates\report\report_4.html:8
+msgid "report4"
+msgstr "Информация обо всех пациентах заданного врача"
+
+#: .\templates\index.html:22 .\templates\service\index.html:3
+#: .\templates\service\index.html:5
+msgid "services"
+msgstr "Услуги"
+
+#: .\templates\index.html:32 .\templates\index.html:70
+#: .\templates\kind\create.html:5 .\templates\kind\edit.html:5
+#: .\templates\service\index.html:37 .\templates\service\read.html:11
+msgid "kind"
+msgstr "Тип услуги"
+
+#: .\templates\index.html:72 .\templates\report\report_2.html:42
+#: .\templates\sale\index.html:16 .\templates\sale\list.html:13
+#: .\templates\sale\read.html:12 .\templates\service\index.html:39
+#: .\templates\service\read.html:13
+msgid "price"
+msgstr "Стоимость"
+
+#: .\templates\kind\index.html:3 .\templates\kind\index.html:5
+msgid "kinds"
+msgstr "Типы услуг"
+
+#: .\templates\report\report_1.html:4 .\templates\report\report_2.html:4
+#: .\templates\report\report_3.html:4 .\templates\report\report_4.html:4
+msgid "Reports"
+msgstr "Отчеты"
+
+#: .\templates\report\report_2.html:13 .\templates\report\report_3.html:13
+msgid "Date range"
+msgstr "Диапазон дат"
+
+#: .\templates\report\report_2.html:31 .\templates\report\report_3.html:31
+#: .\templates\report\report_4.html:27
+msgid "Go"
+msgstr "Выполнить"
+
+#: .\templates\sale\create.html:5 .\templates\sale\edit.html:5
+#: .\templates\sale\read.html:5
+msgid "sale"
+msgstr "Продажа"
+
+#: .\templates\sale\index.html:3 .\templates\sale\index.html:5
+#: .\templates\sale\list.html:3 .\templates\sale\list.html:5
+msgid "sales"
+msgstr "Продажи"
+
+#: .\templates\sale\index.html:7 .\templates\sale\list.html:11
+#: .\templates\visit\create.html:5 .\templates\visit\edit.html:5
+#: .\templates\visit\read.html:5
+msgid "visit"
+msgstr "Посещение врача"
+
+#: .\templates\sale\index.html:15 .\templates\sale\list.html:12
+#: .\templates\sale\read.html:11 .\templates\service\create.html:5
+#: .\templates\service\edit.html:5 .\templates\service\read.html:5
+msgid "service"
+msgstr "Услуга"
+
+#: .\templates\sale\list.html:28
+msgid "total"
+msgstr "Всего"
+
+#: .\templates\schedule\index.html:3 .\templates\schedule\index.html:5
+#: .\templates\schedule\list.html:3 .\templates\schedule\list.html:5
+msgid "schedules"
+msgstr "Расписание"
+
+#: .\templates\specialization\index.html:3
+#: .\templates\specialization\index.html:5
+msgid "specializations"
+msgstr "Специализации"
+
+#: .\templates\visit\index.html:3 .\templates\visit\index.html:5
+#: .\templates\visit\list.html:3 .\templates\visit\list.html:5
+msgid "visits"
+msgstr "Посещения врача"

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Reports" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="row">
+	<h1>{% trans "report4" %}</h1>
+</div>
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div style="margin-top:10px">
+		<p>{% trans "doctor" %}:
+			<select name="item_doctor" class="chosen" style="margin:5px">
+				<option value="-----">-----</option>
+				{% for entry in doctor %}
+					{% if entry.full_name == selected_item_doctor %}
+						<option value="{{ entry.full_name }}" selected="selected">{{ entry.full_name }}</option>
+					{% else %}
+						<option value="{{ entry.full_name }}">{{ entry.full_name }}</option>
+					{% endif %}
+				{% endfor %}
+			</select>
+		</p>
+	</div>
+	<div class="row" style="margin-top:10px">
+		<button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Go" %}</button>
+		<button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button>
+	</div>
+</form>
+<hr>
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "client" %}</p></th>
+				<th><p>{% trans "doctor" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for r in report %}
+			<tr>
+				<td><p>{{ r.client_full_name }}</p></td>	
+				<td><p>{{ r.doctor_full_name }}</p></td>									
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>	
+<div class="div-button-center">
+	<a class="btn btn-outline-info" style="width:120px" href="{% url 'index' %}">{% trans "Back" %}</a> 	
+</div>	
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "service" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+		</div>
+		<div class="card-body">
+			<p><strong>{% trans "kind" %}: </strong>{{ service.kind }}</p>			
+			<p><strong>{% trans "service_title" %}: </strong>{{ service.service_title }}</p>			
+			<p><strong>{% trans "price" %}: </strong>{{ service.price }}</p>			
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<br>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px" href="{% url 'service_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</div>
+{% endblock content %}

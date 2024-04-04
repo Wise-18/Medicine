@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Reports" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="row">
+	<h1>{% trans "report1" %}</h1>
+</div>
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "date_visit" %}</p></th>
+				<th><p>{% trans "client" %}</p></th>
+				<th><p>{% trans "doctor" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for r in report %}
+			<tr>
+				<td><p>{{ r.date_visit | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ r.client_full_name }}</p></td>	
+				<td><p>{{ r.doctor_full_name }}</p></td>									
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>		
+<div class="div-button-center">
+	<a class="btn btn-outline-info" style="width:120px" href="{% url 'index' %}">{% trans "Back" %}</a> 	
+</div>	
+
+{% endblock content %}

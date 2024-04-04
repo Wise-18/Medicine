@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "visits" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "visits" %}</h2>
+<div class="row" style="margin: 10px">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+			<tbody>																	
+				<tr>
+					<td>
+						<p>{% trans "full_name" %} &nbsp;</p>
+					</td>
+					<td>
+						<p><input type="search" value="{{title_search}}" name="title_search"></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Search" %}</button></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button></p>		
+					</td>
+				</tr>
+			</tbody>
+		</table>				
+	</form>
+</div>
+<hr>
+<p><a href="{% url 'visit_create'%}">{% trans "Add" %}</a></p>
+<hr>
+{% if visit.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "date_visit" %}</p></th>
+				<th><p>{% trans "client" %}</p></th>
+				<th><p>{% trans "doctor" %}</p></th>
+				<th><p>{% trans "visit_details" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in visit %}
+			<tr>
+				<td><p>{{ e.date_visit | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ e.client }}</p></td>	
+				<td><p>{{ e.doctor }}</p></td>	
+				<td>
+					<p>{{ e.visit_details }}</p>
+					<p><a href="{% url 'sale_index' e.id%}">{% trans "Sales" %}</a></p>
+				</td>	
+				<td>						
+					<p>
+					<a href="{% url 'visit_edit' e.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'visit_read' e.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'visit_delete' e.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

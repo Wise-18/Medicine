@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "diagnosiss" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "diagnosiss" %}</h2>
+<hr>
+<h4>{% trans "client" %}: {{ client  }}</h4>
+<hr>
+<p><a href="{% url 'diagnosis_create' client_id %}">{% trans "Add" %}</a></p>
+{% if diagnosis.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "client" %}</p></th>
+				<th><p>{% trans "date_diagnosis" %}</p></th>
+				<th><p>{% trans "diagnosis_details" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in diagnosis %}
+			<tr>
+				<td><p>{{ e.client }}</p></td>	
+				<td><p>{{ e.date_diagnosis | date:"d.m.Y" }}</p></td>	
+				<td><p>{{ e.diagnosis_details }}</p></td>	
+				<td>						
+					<p>
+					<a href="{% url 'diagnosis_edit' e.id e.client_id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'diagnosis_read' e.id e.client_id%}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'diagnosis_delete' e.id e.client_id%}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

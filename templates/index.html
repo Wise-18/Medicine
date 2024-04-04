@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "App Name" %}{% endblock title %}
+{% block header %}
+
+{% endblock header %}
+{% block content %}
+
+{% if request.user.is_superuser  %}
+<div style="margin-top:10px">
+	<ul>
+		<li><a href="{% url 'report_1' %}">{% trans "report1" %}</a></li>	
+		<li><a href="{% url 'report_2' %}">{% trans "report2" %}</a></li>	
+		<li><a href="{% url 'report_3' %}">{% trans "report3" %}</a></li>	
+		<li><a href="{% url 'report_4' %}">{% trans "report4" %}</a></li>	
+	</ul>
+</div>
+{% endif %}
+
+<div class="div-width-100-text-center">
+	<h3>{% trans "services" %}</h3>
+</div>
+{% if service.count > 0 %}
+<div class="row" style="margin: 10px">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+			<tbody>													
+				<tr>
+					<td>
+						<p>{% trans "kind" %} &nbsp;</p>
+					</td>
+					<td>
+						<p>
+						<select name="item_kind" class="chosen" style="margin:5px">
+							<option value="-----">-----</option>
+							{% for entry in kind %}
+								{% if entry.kind_title == selected_item_kind %}
+									<option value="{{ entry.kind_title }}" selected="selected">{{ entry.kind_title }}</option>
+								{% else %}
+									<option value="{{ entry.kind_title }}">{{ entry.kind_title }}</option>
+								{% endif %}
+							{% endfor %}
+						</select>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>{% trans "service_title" %} &nbsp;</p>
+					</td>
+					<td>
+						<p><input type="search" value="{{title_search}}" name="title_search"></p>		
+					</td>
+				</tr>
+			</tbody>
+		</table>				
+		<div class="row">
+			<button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Search" %}</button>
+			<button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button>
+		</div>
+	</form>
+</div>
+<hr>
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "kind" %}</p></th>
+				<th><p>{% trans "service_title" %}</p></th>
+				<th><p>{% trans "price" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in service %}
+			<tr>
+				<td><p>{{ e.kind }}</p></td>	
+				<td><p>{{ e.service_title }}</p></td>	
+				<td><p>{{ e.price }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+
+
+{% endblock content %}
+

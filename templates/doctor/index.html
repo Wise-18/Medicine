@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "doctors" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "doctors" %}</h2>
+<div class="row" style="margin: 10px">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<table>
+			<tbody>																	
+				<tr>
+					<td>
+						<p>{% trans "full_name" %} &nbsp;</p>
+					</td>
+					<td>
+						<p><input type="search" value="{{title_search}}" name="title_search"></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-success" name="searchBtn" style="width:120px; margin:5px">{% trans "Search" %}</button></p>		
+					</td>
+					<td>
+						<p><button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px; margin:5px">{% trans "Reset" %}</button></p>		
+					</td>
+				</tr>
+			</tbody>
+		</table>				
+	</form>
+</div>
+<hr>
+<p><a href="{% url 'doctor_create'%}">{% trans "Add" %}</a></p>
+<hr>
+{% if doctor.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "full_name" %}</p></th>
+				<th><p>{% trans "category" %}</p></th>
+				<th><p>{% trans "branch" %}</p></th>
+				<th><p>{% trans "specialization" %}</p></th>
+				<th><p>{% trans "user" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in doctor %}
+			<tr>
+				<td><p>{{ e.full_name }}</p></td>	
+				<td><p>{{ e.category }}</p></td>	
+				<td><p>{{ e.branch }}</p></td>	
+				<td><p>{{ e.specialization }}</p></td>	
+				<td><p>{{ e.user }}</p></td>	
+				<td>						
+					<p>
+					<a href="{% url 'doctor_edit' e.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'doctor_read' e.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'doctor_delete' e.id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "doctor" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+			<h4>{{ doctor.full_name }}</h4>			
+		</div>
+		<div class="card-body">
+			<p><strong>{% trans "category" %}: </strong>{{ doctor.category  }}</p>			
+			<p><strong>{% trans "branch" %}: </strong>{{ doctor.branch }}</p>			
+			<p><strong>{% trans "specialization" %}: </strong>{{ doctor.specialization }}</p>			
+			<p><strong>{% trans "user" %}: </strong>{{ doctor.user }}</p>			
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<br>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px" href="{% url 'doctor_index' %}">{% trans "Back" %}</a> 	
+	</div>	
+</div>
+{% endblock content %}

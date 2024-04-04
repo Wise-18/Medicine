@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "schedules" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "schedules" %}</h2>
+{% if schedule.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "doctor" %}</p></th>
+				<th><p>{% trans "week_day" %}</p></th>
+				<th><p>{% trans "time_schedule" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in schedule %}
+			<tr>
+				<td><p>{{ e.doctor }}</p></td>	
+				<td><p>{{ e.week_day }}</p></td>	
+				<td><p>{{ e.time_schedule }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "sales" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "sales" %}</h2>
+<hr>
+<h4>{% trans "visit" %}: {{ visit }}</h4>
+<p><a href="{% url 'sale_create' visit_id%}">{% trans "Add" %}</a></p>
+<hr>
+{% if sale.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "service" %}</p></th>
+				<th><p>{% trans "price" %}</p></th>
+				<th><p></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in sale %}
+			<tr>
+				<td><p>{{ e.service }}</p></td>	
+				<td><p>{{ e.price }}</p></td>	
+				<td>						
+					<p>
+					<a href="{% url 'sale_edit' e.id visit_id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'sale_read' e.id visit_id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'sale_delete' e.id visit_id %}">{% trans "Delete" %}</a>
+					</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "sales" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "sales" %}</h2>
+{% if sale.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "visit" %}</p></th>
+				<th><p>{% trans "service" %}</p></th>
+				<th><p>{% trans "price" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in sale %}
+			<tr>
+				<td><p>{{ e.visit }}</p></td>	
+				<td><p>{{ e.service }}</p></td>	
+				<td><p>{{ e.price }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+<div class="row">
+	<p><strong>{% trans "total" %}: </strong>{{ total.price__sum }}</p>
+</div>
+{% endif %}
+{% endblock content %}
+

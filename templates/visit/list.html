@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "visits" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "visits" %}</h2>
+{% if visit.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "date_visit" %}</p></th>
+				<th><p>{% trans "client" %}</p></th>
+				<th><p>{% trans "doctor" %}</p></th>
+				<th><p>{% trans "visit_details" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for e in visit %}
+			<tr>
+				<td><p>{{ e.date_visit | date:"d.m.Y H:i" }}</p></td>	
+				<td><p>{{ e.client }}</p></td>	
+				<td><p>{{ e.doctor }}</p></td>	
+				<td><p>{{ e.visit_details }}</p></td>	
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

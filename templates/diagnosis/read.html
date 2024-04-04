@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "diagnosis" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+			<h4>{{ diagnosis.client }}</h4>			
+		</div>
+		<div class="card-body">
+			<p><strong>{% trans "date_diagnosis" %}: </strong>{{ diagnosis.date_diagnosis | date:"d.m.Y" }}</p>			
+			<p><strong>{% trans "diagnosis_details" %}: </strong>{{ diagnosis.diagnosis_details }}</p>			
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<br>
+	<div class="div-button-center">
+		<a class="btn btn-outline-info" style="width:120px" href="{% url 'diagnosis_index' client_id%}">{% trans "Back" %}</a> 	
+	</div>	
+</div>
+{% endblock content %}
